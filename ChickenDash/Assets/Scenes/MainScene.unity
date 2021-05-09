@@ -440,7 +440,7 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 1
-  jumpForce: 7
+  jumpForce: 2
   col: {fileID: 0}
 --- !u!1 &1867592349
 GameObject:
