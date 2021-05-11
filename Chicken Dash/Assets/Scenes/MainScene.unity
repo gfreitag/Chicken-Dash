@@ -316,7 +316,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &399926927
 SpriteRenderer:
@@ -400,14 +400,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f990223af1f64fcc9430fe6dc6909b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mountainsB: []
-  mountainsFB: []
-  fogB: []
-  mountainsF: []
-  fogF: []
-  firB: []
-  firF: []
-  clouds: []
+  scrollSpeed: 0
+  mountainsB:
+  - {fileID: 399926925}
+  - {fileID: 895152509}
+  mountainsFB:
+  - {fileID: 1105310007}
+  - {fileID: 1314261190}
+  fogB:
+  - {fileID: 1122156387}
+  - {fileID: 885485301}
+  mountainsF:
+  - {fileID: 1108313853}
+  - {fileID: 1329018320}
+  - {fileID: 705195103}
+  fogF:
+  - {fileID: 1412189243}
+  - {fileID: 1875860209}
+  - {fileID: 743749562}
+  firB:
+  - {fileID: 160662917}
+  - {fileID: 1901330657}
+  - {fileID: 54387821}
+  firF:
+  - {fileID: 1522977676}
+  - {fileID: 1609405686}
+  - {fileID: 1346282536}
+  clouds:
+  - {fileID: 730415609}
+  - {fileID: 868536944}
+  ground:
+  - {fileID: 1192899569}
 --- !u!81 &414972129
 AudioListener:
   m_ObjectHideFlags: 0
@@ -730,7 +753,7 @@ GameObject:
   - component: {fileID: 743749563}
   - component: {fileID: 743749564}
   m_Layer: 0
-  m_Name: Fog_Front2
+  m_Name: Fog_Front3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -748,7 +771,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &743749564
 SpriteRenderer:
@@ -994,7 +1017,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &895152511
 SpriteRenderer:
@@ -1076,7 +1099,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1105310009
 SpriteRenderer:
@@ -1140,7 +1163,7 @@ GameObject:
   - component: {fileID: 1108313854}
   - component: {fileID: 1108313855}
   m_Layer: 0
-  m_Name: Mountains_Front2
+  m_Name: Mountains_Front1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1158,7 +1181,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1108313855
 SpriteRenderer:
@@ -1240,7 +1263,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1122156389
 SpriteRenderer:
@@ -1592,7 +1615,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1314261192
 SpriteRenderer:
@@ -1656,7 +1679,7 @@ GameObject:
   - component: {fileID: 1329018321}
   - component: {fileID: 1329018322}
   m_Layer: 0
-  m_Name: Mountains_Front1
+  m_Name: Mountains_Front2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1674,7 +1697,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1329018322
 SpriteRenderer:
@@ -1820,7 +1843,7 @@ GameObject:
   - component: {fileID: 1412189244}
   - component: {fileID: 1412189245}
   m_Layer: 0
-  m_Name: Fog_Front3
+  m_Name: Fog_Front1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1838,7 +1861,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1412189245
 SpriteRenderer:
@@ -2066,7 +2089,7 @@ GameObject:
   - component: {fileID: 1875860210}
   - component: {fileID: 1875860211}
   m_Layer: 0
-  m_Name: Fog_Front1
+  m_Name: Fog_Front2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2084,7 +2107,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1875860211
 SpriteRenderer:
