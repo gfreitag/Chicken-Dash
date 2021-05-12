@@ -56,7 +56,9 @@ public class BackgroundLoop : MonoBehaviour
 
     void generateNewLayout(GameObject[] arr)
     {
-        float halfObjectWidth = arr[0].GetComponent<SpriteRenderer>().bounds.extents.x;
+        SpriteRenderer childSprite = (SpriteRenderer) arr[0].GetComponentInChildren(typeof(SpriteRenderer));
+
+        float halfObjectWidth = childSprite.bounds.extents.x;
         if(transform.position.x + screenBounds.x > arr[arr.Length-1].transform.position.x + halfObjectWidth)
         {
             Vector3 newpos = new Vector3(arr[arr.Length-1].transform.position.x + halfObjectWidth * 2,
@@ -67,7 +69,8 @@ public class BackgroundLoop : MonoBehaviour
               arr[i]=arr[i+1];
             }
             GameObject newLayout = randgen.getRandomLayout();
-            newLayout.GetComponent<BoxCollider2D>().enabled = true;
+            BoxCollider2D collider = (BoxCollider2D) newLayout.GetComponentInChildren(typeof(BoxCollider2D));
+            collider.enabled = true;
             newLayout.transform.position = newpos;
             newLayout.layer = 6;
             arr[arr.Length-1] = newLayout;

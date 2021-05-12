@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlayerRun : MonoBehaviour
 {
     // Start is called before the first frame update
-    private float speed = 3.0f;
+    private float speed = 7.0f;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
