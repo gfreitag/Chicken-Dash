@@ -90,7 +90,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObstacleSquare (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9046914070863948970, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
+    - {fileID: 6298707748549047228, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
 --- !u!4 &1292189125341081802 stripped
 Transform:
@@ -214,7 +216,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObstacleSquare (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9046914070863948970, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
+    - {fileID: 6298707748549047228, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
 --- !u!4 &1292189126265063145 stripped
 Transform:
@@ -276,7 +280,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObstacleSquare (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9046914070863948970, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
+    - {fileID: 6298707748549047228, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
 --- !u!4 &1292189124737668832 stripped
 Transform:
@@ -338,7 +344,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObstacleSquare (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9046914070863948970, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
+    - {fileID: 6298707748549047228, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
 --- !u!4 &1292189125071281320 stripped
 Transform:

@@ -1,5 +1,29 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &883471348620190397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153125503792377508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b6b57a07df4480f8a39a991c934d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4129405257319183800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8924182737692750816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b6b57a07df4480f8a39a991c934d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9202921201834362894
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,8 +113,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObstacleSquare (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9046914070863948970, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
+    - {fileID: 6298707748549047228, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
+--- !u!1 &1153125503792377508 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1656216921998714253, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
+  m_PrefabInstance: {fileID: 503463121864985385}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &685263846649417716 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1116368089222563037, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
@@ -151,7 +182,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObstacleSquare (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9046914070863948970, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
+    - {fileID: 6298707748549047228, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
 --- !u!4 &3152523853590762322 stripped
 Transform:
@@ -275,8 +308,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObstacleSquare (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9046914070863948970, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
+    - {fileID: 6298707748549047228, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
+--- !u!1 &8924182737692750816 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1656216921998714253, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}
+  m_PrefabInstance: {fileID: 7864692775720064621}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7087296603019629232 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1116368089222563037, guid: e5561442bda7a489eb6e899a0cc9134c, type: 3}

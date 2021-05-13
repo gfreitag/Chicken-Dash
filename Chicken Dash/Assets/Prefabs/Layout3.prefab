@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6841814204801109654}
   - component: {fileID: 6841814204801109656}
-  - component: {fileID: 6841814204801109657}
+  - component: {fileID: 8199561381411462990}
   m_Layer: 0
   m_Name: ObstacleSquare (5)
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6841814204801109657
+--- !u!61 &8199561381411462990
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,10 +156,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6841814204990083505}
   - component: {fileID: 6841814204990083507}
-  - component: {fileID: 6841814204990083504}
+  - component: {fileID: 5214997316886756771}
   m_Layer: 0
   m_Name: ObstacleSquare (4)
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,7 +229,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6841814204990083504
+--- !u!61 &5214997316886756771
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -265,10 +265,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6841814205156534778}
   - component: {fileID: 6841814205156534780}
-  - component: {fileID: 6841814205156534781}
+  - component: {fileID: 4954865958383927592}
   m_Layer: 0
   m_Name: ObstacleSquare (1)
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -338,7 +338,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6841814205156534781
+--- !u!61 &4954865958383927592
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -374,10 +374,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6841814205234365435}
   - component: {fileID: 6841814205234365437}
-  - component: {fileID: 6841814205234365434}
+  - component: {fileID: 3334331197740074880}
   m_Layer: 0
   m_Name: ObstacleSquare (6)
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -447,7 +447,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6841814205234365434
+--- !u!61 &3334331197740074880
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -483,10 +483,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6841814205241246960}
   - component: {fileID: 6841814205241246962}
-  - component: {fileID: 6841814205241246963}
+  - component: {fileID: 6872823714833033221}
   m_Layer: 0
   m_Name: ObstacleSquare (2)
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -556,7 +556,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6841814205241246963
+--- !u!61 &6872823714833033221
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -592,10 +592,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6841814205960415942}
   - component: {fileID: 6841814205960415944}
-  - component: {fileID: 6841814205960415945}
+  - component: {fileID: 7195738502574523481}
   m_Layer: 0
   m_Name: ObstacleSquare (3)
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -665,7 +665,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6841814205960415945
+--- !u!61 &7195738502574523481
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -2,31 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerRun : MonoBehaviour
+public class ObstacleTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
-    private float speed = 7.0f;
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Time.deltaTime*speed, 0,0);
+        
     }
 
-
-   /* private void OnTriggerEnter(Collider obstacle)
+    private void OnTriggerEnter(Collider other)
     {
-        if (obstacle.tag == "obstacle") 
+        if (other.tag == "player") 
         {
-            Debug.Log("ouch!");
-
+            Debug.Log("OUCH!");
         }
     }
-    */
-
-
 }
