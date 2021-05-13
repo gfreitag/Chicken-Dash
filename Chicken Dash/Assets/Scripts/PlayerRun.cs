@@ -16,4 +16,13 @@ public class PlayerRun : MonoBehaviour
     {
         transform.Translate(Time.deltaTime*speed, 0,0);
     }
+
+    private void OnTriggerEnter(Collider obstacle)
+    {
+        if (obstacle.tag == "obstacle") 
+        {
+            Debug.Log("ouch!");
+
+        }
+    }
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9046914070863948970}
   m_Layer: 0
   m_Name: ObstacleSquare
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
