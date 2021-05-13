@@ -8,7 +8,7 @@ public class PlayerJump : MonoBehaviour
     [SerializeField] private LayerMask groundLayerMask;
     private Rigidbody2D rb;
     private BoxCollider2D boxCollider2d;
-    private float jumpForce = 400f;
+    private float jumpForce = 700f;
     // Start is called before the first frame update
     void Start()
     {
