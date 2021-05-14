@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     bool gameHasEnded = false;
     public float restartTime = 3f;
+    public GameObject popup;
 
     public void EndGame()
     {
@@ -16,7 +17,8 @@ public class GameManager : MonoBehaviour
         {
             gameHasEnded = true;
             Debug.Log("GAME OVER");
-            Invoke("Restart", restartTime);
+            popup.SetActive(true);
+            //Invoke("Restart", restartTime);
         }
     }
 
@@ -24,5 +26,5 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    
+
 }
