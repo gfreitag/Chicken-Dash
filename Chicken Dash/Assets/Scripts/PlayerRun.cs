@@ -6,6 +6,8 @@ public class PlayerRun : MonoBehaviour
 {
     // Start is called before the first frame update
     private float speed = 7.0f;
+    private float distanceMoved ;
+    private float counter = 0f;
     void Start()
     {
 
@@ -15,6 +17,14 @@ public class PlayerRun : MonoBehaviour
     void Update()
     {
         transform.Translate(Time.deltaTime*speed, 0,0);
+        counter = counter+1;
+         Debug.Log("distance:" + counter);
+
+         if (counter == 1000)
+         {
+             counter = 0f;
+             speed = 9.0f;
+         }
     }
 
 
