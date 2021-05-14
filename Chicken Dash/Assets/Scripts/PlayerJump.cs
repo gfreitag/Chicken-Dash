@@ -32,7 +32,6 @@ public class PlayerJump : MonoBehaviour
         if(Input.touchCount > 0  && (Input.GetTouch(0).phase == TouchPhase.Ended || Input.GetTouch(0).phase == TouchPhase.Canceled)&&isGrounded())
         {
             float duration = Time.time - touchTime;
-            Debug.Log("duration: " + duration);
             rb.AddForce(transform.up*jumpForce*(Mathf.Clamp(duration,durMin,durMax)*10));
         }
     }
