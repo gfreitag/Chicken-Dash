@@ -20,7 +20,7 @@ public class PlayerRun : MonoBehaviour
         counter = counter+1;
          Debug.Log("distance:" + counter);
 
-         if (counter == 2000)
+         if (counter == 2000.0)
          {
              counter = 0f;
              speed = speed + 0.5f;
