@@ -9,6 +9,9 @@ public class PlayerJump : MonoBehaviour
     private Rigidbody2D rb;
     private BoxCollider2D boxCollider2d;
     private float jumpForce = 700f;
+    private float touchTime;
+    private float durMin = 0.08f;
+    private float durMax = 0.14f;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +26,14 @@ public class PlayerJump : MonoBehaviour
         //if at least one finger is on screen and the first finger has just touched screen propel rigidbody of player (so player) up y-axis by jumpforce
         if (Input.touchCount > 0  && Input.GetTouch(0).phase == TouchPhase.Began && isGrounded())
         {
-            rb.AddForce(transform.up*jumpForce);
+            touchTime = Time.time;
             //rb.velocity = Vector2.up*jumpForce;
+        }
+        if(Input.touchCount > 0  && (Input.GetTouch(0).phase == TouchPhase.Ended || Input.GetTouch(0).phase == TouchPhase.Canceled)&&isGrounded())
+        {
+            float duration = Time.time - touchTime;
+            Debug.Log("duration: " + duration);
+            rb.AddForce(transform.up*jumpForce*(Mathf.Clamp(duration,durMin,durMax)*10));
         }
     }
 
