@@ -21,7 +21,7 @@ public class ObstacleCol : MonoBehaviour
         if (collision.gameObject.tag == "obstacle")
         {
             //If the GameObject has the same tag as specified, output this message in the console
-            FindObjectOfType<GameManager>().EndGame();
+            //FindObjectOfType<GameManager>().EndGame();
         }
     }
 }

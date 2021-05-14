@@ -21,15 +21,15 @@ public class PlayerRun : MonoBehaviour
         currPos = transform.position.x - startPos;
         Debug.Log("current: " + currPos);
 
-        if (currPos == 2000f) 
+        if (currPos == 1000f) 
         {
+            Debug.Log("CHANGING SPEED");
             speed = speed + 0.5f;
-
+            startPos = transform.position.x;
         }
         transform.Translate(Time.deltaTime*speed, 0,0);
 
-        startPos = transform.position.x;
-
+        
 
     }
 
