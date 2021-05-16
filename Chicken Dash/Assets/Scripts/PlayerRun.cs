@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerRun : MonoBehaviour
 {
     // Start is called before the first frame update
-    private float speed = 7.0f;
+    public float speed = 7.0f;
+    public float acc = .10f;
     private float distanceMoved ;
     private float startPos;
     private float currPos;
@@ -18,6 +19,10 @@ public class PlayerRun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        speed += Time.deltaTime*acc;
+        transform.Translate(Time.deltaTime*speed, 0,0);
+
+        /*
         currPos = transform.position.x - startPos;
         Debug.Log("current: " + currPos);
 
@@ -29,7 +34,7 @@ public class PlayerRun : MonoBehaviour
         }
         transform.Translate(Time.deltaTime*speed, 0,0);
 
-        
+        */
 
     }
 
