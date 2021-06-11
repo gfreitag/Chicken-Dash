@@ -27,11 +27,18 @@ public class ObstacleCol : MonoBehaviour
             //If the GameObject has the same tag as specified, output this message in the console
             //FindObjectOfType<GameManager>().EndGame();
             popup.SetActive(true);
+            Debug.Log("GAME OVER");
+            switchToEnd();
         }
     }
 
     public void restart()
     {
         SceneManager.LoadScene("MainScene");
+    }
+
+    void switchToEnd()
+    {
+        SceneManager.LoadScene("EndGame");
     }
 }

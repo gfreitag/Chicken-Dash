@@ -10,6 +10,7 @@ public class BackgroundLoop : MonoBehaviour
     private Camera mainCamera;
     private RandomGen randgen;
     public float scrollSpeed;
+    public DoNotDestroy dnd;
     //arrays of the different background objects
     public GameObject[] mountainsB;
     public GameObject[] mountainsFB;

@@ -16,8 +16,7 @@ public class GameManager : MonoBehaviour
         if (gameHasEnded == false)
         {
             gameHasEnded = true;
-            Debug.Log("GAME OVER");
-            popup.SetActive(true);
+            
             //Invoke("Restart", restartTime);
         }
     }
@@ -26,5 +25,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+
 
 }
