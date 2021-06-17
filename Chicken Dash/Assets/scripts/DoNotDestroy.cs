@@ -16,6 +16,14 @@ public class DoNotDestroy : MonoBehaviour
         }
     }
 
+    public void updateRef()
+    {
+        foreach (GameObject obj in objs)
+        {
+            DontDestroyOnLoad(obj);
+        }
+    }
+
     // Start is called before the first frame update
     void Start(){}
 

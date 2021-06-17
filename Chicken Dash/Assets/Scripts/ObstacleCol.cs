@@ -7,6 +7,8 @@ public class ObstacleCol : MonoBehaviour
 {
 
     public GameObject popup;
+    public BackgroundLoop bgLoop;
+    public DoNotDestroy dnd;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,9 @@ public class ObstacleCol : MonoBehaviour
             //FindObjectOfType<GameManager>().EndGame();
             popup.SetActive(true);
             Debug.Log("GAME OVER");
+            dnd.objs[0]=bgLoop.ground[0];
+            dnd.objs[1]=bgLoop.ground[1];
+            dnd.updateRef();
             switchToEnd();
         }
     }
