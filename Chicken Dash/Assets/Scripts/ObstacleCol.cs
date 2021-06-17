@@ -39,6 +39,13 @@ public class ObstacleCol : MonoBehaviour
 
     public void restart()
     {
+        for(int i=0; i<dnd.objs.Length; i++)
+        {
+            if(dnd.objs[i]!=null)
+            {
+                    Destroy(dnd.objs[i]);
+            }
+        }
         SceneManager.LoadScene("MainScene");
     }
 

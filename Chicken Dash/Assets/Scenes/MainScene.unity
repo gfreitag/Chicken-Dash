@@ -2118,6 +2118,7 @@ MonoBehaviour:
   - {fileID: 1268183130}
   - {fileID: 1171412073}
   - {fileID: 31526950}
+  - {fileID: 1296105685}
 --- !u!4 &1210425741
 Transform:
   m_ObjectHideFlags: 0
@@ -2452,8 +2453,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popup: {fileID: 1171412073}
-  bgLoop: {fileID: 0}
-  dnd: {fileID: 0}
+  bgLoop: {fileID: 414972128}
+  dnd: {fileID: 1210425740}
 --- !u!95 &1296105693
 Animator:
   serializedVersion: 3
