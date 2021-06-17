@@ -13,7 +13,8 @@ public class ObstacleCol : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        GameObject newPop = GameObject.Find("EndScreen");
+        newPop.SetActive(false);
     }
 
     // Update is called once per frame
@@ -30,22 +31,31 @@ public class ObstacleCol : MonoBehaviour
             //FindObjectOfType<GameManager>().EndGame();
             popup.SetActive(true);
             Debug.Log("GAME OVER");
-            dnd.objs[0]=bgLoop.ground[0];
-            dnd.objs[1]=bgLoop.ground[1];
+            if(bgLoop.ground[0]!=null)
+            {
+                dnd.objs[0]=bgLoop.ground[0];
+            }
+            if(bgLoop.ground[1]!=null)
+            {
+                dnd.objs[1]=bgLoop.ground[1];
+            }
             dnd.updateRef();
-            switchToEnd();
+            //switchToEnd();
         }
     }
 
     public void restart()
     {
-        for(int i=0; i<dnd.objs.Length; i++)
+        //foreach (Transform child in GameObject.Find("DontDestroyOnLoad").transform)
+        //{
+            //Destroy(child);
+        //}
+        /*GameObject[] lst = SceneManager.GetActiveScene().GetRootGameObjects();
+        Debug.Log("OBJECTS: "+lst);
+        foreach(GameObject ob in lst)
         {
-            if(dnd.objs[i]!=null)
-            {
-                    Destroy(dnd.objs[i]);
-            }
-        }
+            Debug.Log("OB: "+ob);
+        }*/
         SceneManager.LoadScene("MainScene");
     }
 

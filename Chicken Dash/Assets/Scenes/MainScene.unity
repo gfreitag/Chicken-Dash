@@ -577,7 +577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 0
-  dnd: {fileID: 0}
+  dnd: {fileID: 1210425740}
   mountainsB:
   - {fileID: 399926925}
   - {fileID: 895152509}
@@ -2348,7 +2348,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.39890575, y: 0.18959665}
+  m_Offset: {x: 0.45349717, y: -0.4499036}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2359,7 +2359,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.3879404, y: 3.3159971}
+  m_Size: {x: 2.3429046, y: 3.066436}
   m_EdgeRadius: 0
 --- !u!212 &1296105689
 SpriteRenderer:
