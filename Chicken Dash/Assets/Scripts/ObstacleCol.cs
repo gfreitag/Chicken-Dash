@@ -31,14 +31,6 @@ public class ObstacleCol : MonoBehaviour
             //FindObjectOfType<GameManager>().EndGame();
             popup.SetActive(true);
             Debug.Log("GAME OVER");
-            if(bgLoop.ground[0]!=null)
-            {
-                dnd.objs[0]=bgLoop.ground[0];
-            }
-            if(bgLoop.ground[1]!=null)
-            {
-                dnd.objs[1]=bgLoop.ground[1];
-            }
             dnd.updateRef();
             //switchToEnd();
         }
@@ -62,5 +54,10 @@ public class ObstacleCol : MonoBehaviour
     void switchToEnd()
     {
         SceneManager.LoadScene("EndGame");
+    }
+
+    public void switchToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
