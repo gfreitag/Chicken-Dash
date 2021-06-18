@@ -6,7 +6,7 @@ public class PlayerRun : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed = 7.0f;
-    public float acc = .10f;
+    public float acc = .07f;
     private float distanceMoved ;
     private float startPos;
     private float currPos;
