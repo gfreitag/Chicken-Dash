@@ -53,11 +53,9 @@ public class PlayerRun : MonoBehaviour
     void distance() 
     {
         //update score (score is distance travelled)
-       //if (!stopScore)
-       {
            score++;
            textScore.text = score.ToString();
-       }
+    
         
     }
 

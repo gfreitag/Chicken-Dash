@@ -31,7 +31,8 @@ public class ObstacleCol : MonoBehaviour
         {
             //If the GameObject has the same tag as specified, output this message in the console
             //FindObjectOfType<GameManager>().EndGame();
-            stopScore = true;
+            //this.GetComponent<PlayerRun>().enabled = false;
+            Destroy(GetComponent<PlayerRun>());
             popup.SetActive(true);
             Debug.Log("GAME OVER");
             dnd.updateRef();
