@@ -12,10 +12,14 @@ public class PlayerJump : MonoBehaviour
     private float touchTime;
     private float durMin = 0.08f;
     private float durMax = 0.14f;
+    public bool pause = false;
+    public bool pauseToggle = false;
+    private int pause_count;
     // Start is called before the first frame update
     void Start()
     {
         //get rigidbody attached to player, so we can manipulate it
+        pause_count = 0;
         rb = GetComponent<Rigidbody2D>();
         boxCollider2d =  GetComponent<BoxCollider2D>();
     }
@@ -24,15 +28,31 @@ public class PlayerJump : MonoBehaviour
     void Update()
     {
         //if at least one finger is on screen and the first finger has just touched screen propel rigidbody of player (so player) up y-axis by jumpforce
-        if (Input.touchCount > 0  && Input.GetTouch(0).phase == TouchPhase.Began && isGrounded())
+        if (Input.touchCount > 0  && Input.GetTouch(0).phase == TouchPhase.Began && isGrounded() && pause == false)
         {
             touchTime = Time.time;
             //rb.velocity = Vector2.up*jumpForce;
         }
+        if(pause == true)
+        {
+            if(pauseToggle == true)
+            {
+                pause_count= pause_count+2;
+                pauseToggle = false;
+            }
+            touchTime = Time.time;
+        }
         if(Input.touchCount > 0  && (Input.GetTouch(0).phase == TouchPhase.Ended || Input.GetTouch(0).phase == TouchPhase.Canceled)&&isGrounded())
         {
-            float duration = Time.time - touchTime;
-            rb.AddForce(transform.up*jumpForce*(Mathf.Clamp(duration,durMin,durMax)*10));
+            if(pause_count==0)
+            {
+                float duration = Time.time - touchTime;
+                rb.AddForce(transform.up*jumpForce*(Mathf.Clamp(duration,durMin,durMax)*10));
+            }
+            else
+            {
+                pause_count--;
+            }
         }
     }
 
