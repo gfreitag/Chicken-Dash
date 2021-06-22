@@ -9,12 +9,14 @@ public class ObstacleCol : MonoBehaviour
     public GameObject popup;
     public BackgroundLoop bgLoop;
     public DoNotDestroy dnd;
+    public bool stopScore;
 
     // Start is called before the first frame update
     void Start()
     {
         GameObject newPop = GameObject.Find("EndScreen");
         newPop.SetActive(false);
+        stopScore = false;
     }
 
     // Update is called once per frame
@@ -29,6 +31,7 @@ public class ObstacleCol : MonoBehaviour
         {
             //If the GameObject has the same tag as specified, output this message in the console
             //FindObjectOfType<GameManager>().EndGame();
+            stopScore = true;
             popup.SetActive(true);
             Debug.Log("GAME OVER");
             dnd.updateRef();
