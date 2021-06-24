@@ -333,6 +333,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &75171235 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 150860, guid: df93da55c6ab79e40b5edf0196e909b4, type: 3}
+  m_PrefabInstance: {fileID: 972429098}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &160662917
 GameObject:
   m_ObjectHideFlags: 0
@@ -2117,6 +2122,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1296105685}
+    - target: {fileID: 11477260, guid: df93da55c6ab79e40b5edf0196e909b4, type: 3}
+      propertyPath: pause_popup
+      value: 
+      objectReference: {fileID: 1367236784}
     - target: {fileID: 22447610, guid: df93da55c6ab79e40b5edf0196e909b4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3199,6 +3208,7 @@ MonoBehaviour:
   bgLoop: {fileID: 414972128}
   dnd: {fileID: 0}
   stopScore: 0
+  button: {fileID: 75171235}
 --- !u!95 &1296105693
 Animator:
   serializedVersion: 3
@@ -3482,7 +3492,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1367236785
 MonoBehaviour:
   m_ObjectHideFlags: 0

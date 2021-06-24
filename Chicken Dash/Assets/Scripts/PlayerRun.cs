@@ -9,7 +9,7 @@ public class PlayerRun : MonoBehaviour
     public float speed = 7.0f;
     public float acc = .07f;
     public Text textScore;
-    private int score = -1;
+    private int score = 0;
     //public ObstacleCol stopScore;
     //private float distanceMoved ;
     //private float startPos;

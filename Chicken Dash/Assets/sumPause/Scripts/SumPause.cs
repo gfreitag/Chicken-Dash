@@ -8,6 +8,7 @@ public class SumPause : MonoBehaviour {
     // Event managers
     public delegate void PauseAction(bool paused);
     public static event PauseAction pauseEvent;
+    public GameObject pause_popup;
 
     // Variables set via inspector
     [SerializeField]
@@ -75,6 +76,8 @@ public class SumPause : MonoBehaviour {
         Status = !Status; // Flip current status
         pj.pause = !pj.pause;
         pj.pauseToggle = true;
+        pause_popup.SetActive(pj.pause);
+
     }
 
     /// <summary>Checks if all links are properly connected</summary>

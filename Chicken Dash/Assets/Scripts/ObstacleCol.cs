@@ -10,6 +10,7 @@ public class ObstacleCol : MonoBehaviour
     public BackgroundLoop bgLoop;
     public DoNotDestroy dnd;
     public bool stopScore;
+    public GameObject button;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,7 @@ public class ObstacleCol : MonoBehaviour
             //FindObjectOfType<GameManager>().EndGame();
             //this.GetComponent<PlayerRun>().enabled = false;
             Destroy(GetComponent<PlayerRun>());
+            Destroy(button);
             popup.SetActive(true);
             Debug.Log("GAME OVER");
             dnd.updateRef();
