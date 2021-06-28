@@ -11,7 +11,11 @@ public class ObstacleCol : MonoBehaviour
     public DoNotDestroy dnd;
     public bool stopScore;
     public GameObject button;
-
+    public Sprite death_sprite;
+    private SpriteRenderer spriteRenderer;
+    public PlayerRun pRun;
+    private float jumpForce = 700f;
+    private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,13 +37,29 @@ public class ObstacleCol : MonoBehaviour
             //If the GameObject has the same tag as specified, output this message in the console
             //FindObjectOfType<GameManager>().EndGame();
             //this.GetComponent<PlayerRun>().enabled = false;
+            pRun = (PlayerRun) GameObject.Find("CameraManager").GetComponent(typeof(PlayerRun));
+            pRun.speed = 3;
             Destroy(GetComponent<PlayerRun>());
+            Destroy(GetComponent<Animator>());
+            rb = GetComponent<Rigidbody2D>();
+            spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = death_sprite;
+            rb.AddForce(transform.up*jumpForce*(0.11f*10));
+
+            Destroy(GetComponent<Rigidbody2D>());
+            //StartCoroutine("DeathJump");
             Destroy(button);
             popup.SetActive(true);
             Debug.Log("GAME OVER");
             dnd.updateRef();
             //switchToEnd();
         }
+    }
+
+    IEnumerator DeathJump()
+    {
+
+        yield return null;
     }
 
     public void restart()
