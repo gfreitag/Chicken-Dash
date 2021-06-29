@@ -46,10 +46,7 @@ public class ObstacleCol : MonoBehaviour
             rb = GetComponent<Rigidbody2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             spriteRenderer.sprite = death_sprite;
-            rb.AddForce(transform.up*jumpForce*(0.11f*10));
-
-            Destroy(GetComponent<Rigidbody2D>());
-            //StartCoroutine("DeathJump");
+            rb.AddForce(transform.up*jumpForce*1.1f);
             Destroy(button);
             popup.SetActive(true);
             Debug.Log("GAME OVER");
