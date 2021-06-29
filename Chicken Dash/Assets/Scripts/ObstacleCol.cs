@@ -16,6 +16,9 @@ public class ObstacleCol : MonoBehaviour
     private PlayerRun pRun;
     private float jumpForce = 700f;
     private Rigidbody2D rb;
+    AudioSource aSource2;
+    public AudioClip aClip2;
+    private bool played = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +42,13 @@ public class ObstacleCol : MonoBehaviour
             //If the GameObject has the same tag as specified, output this message in the console
             //FindObjectOfType<GameManager>().EndGame();
             //this.GetComponent<PlayerRun>().enabled = false;
+            if(played==false)
+            {
+                aSource2 = gameObject.AddComponent<AudioSource>();
+                aSource2.clip = aClip2;
+                aSource2.Play();
+                played=true;
+            }
             pRun = (PlayerRun) GameObject.Find("CameraManager").GetComponent(typeof(PlayerRun));
             pRun.speed = 3;
             Destroy(GetComponent<PlayerRun>());

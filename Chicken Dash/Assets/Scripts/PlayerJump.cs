@@ -15,6 +15,8 @@ public class PlayerJump : MonoBehaviour
     public bool pause = false;
     public bool pauseToggle = false;
     private int pause_count;
+    AudioSource aSource1;
+    public AudioClip aClip1;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,8 @@ public class PlayerJump : MonoBehaviour
         pause_count = 0;
         rb = GetComponent<Rigidbody2D>();
         boxCollider2d =  GetComponent<BoxCollider2D>();
+        aSource1 = gameObject.AddComponent<AudioSource>();
+        aSource1.clip = aClip1;
     }
 
     // Update is called once per frame
@@ -48,6 +52,7 @@ public class PlayerJump : MonoBehaviour
             {
                 float duration = Time.time - touchTime;
                 rb.AddForce(transform.up*jumpForce*(Mathf.Clamp(duration,durMin,durMax)*10));
+                aSource1.Play();
             }
             else
             {
