@@ -59,16 +59,42 @@ public class PlayerRun : MonoBehaviour
 
     }
 
-
-   /* private void OnTriggerEnter(Collider obstacle)
+    public void AddScore (string name, int score_up)
     {
-        if (obstacle.tag == "obstacle")
+        int newScore;
+        string newName;
+        int oldScore;
+        string oldName;
+        newScore = score_up;
+        newName = name;
+        
+        for (int i=0;i<3;i++)
         {
-            Debug.Log("ouch!");
-
-        }
+            if (PlayerPrefs.HasKey("HighScore" + i))
+            {
+                //if new score is higher than old score
+                if (PlayerPrefs.GetInt("HighScore" + i) < newScore)
+                {
+                    //save old scores to oldScore and oldName
+                    //update present high score and name to new high score and name
+                    oldScore = PlayerPrefs.GetInt("HighScore" + i);
+                    oldName = PlayerPrefs.GetString("HighScoreName" + i);
+                    PlayerPrefs.SetInt("HighScore" + i, newScore);
+                    PlayerPrefs.SetString("HighScore" + i, newName);
+                    //set newScore and newName variables to newScore and newName
+                    //can update rest of table 
+                    newScore = oldScore;
+                    newName = oldName;
+                }
+            }else
+            {
+                PlayerPrefs.SetInt("HighScore" + i, newScore);
+                PlayerPrefs.SetString("HighScore" + i, newName);
+                newScore = 0;
+                newName = "";
+            }
+        } 
     }
-    */
 
 
 }
