@@ -13,7 +13,7 @@ public class ObstacleCol : MonoBehaviour
     public GameObject button;
     public Sprite death_sprite;
     private SpriteRenderer spriteRenderer;
-    public PlayerRun pRun;
+    private PlayerRun pRun;
     private float jumpForce = 700f;
     private Rigidbody2D rb;
     // Start is called before the first frame update
@@ -29,6 +29,8 @@ public class ObstacleCol : MonoBehaviour
     {
 
     }
+
+//uncontained references that need to be fixed before saving
 
      void OnCollisionEnter2D(Collision2D collision)
     {
