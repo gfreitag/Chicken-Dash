@@ -7,21 +7,22 @@ public class Collect : MonoBehaviour
 {
     //public GameObject eggTracker;
     private EggCount eggCount;
-    AudioSource audioData;
+    public AudioClip aClip;
+    private AudioSource aSource;
 
     void Start()
     {
-        audioData = GetComponent<AudioSource>();
+        aSource = gameObject.AddComponent<AudioSource>();
+        aSource.clip = aClip;
         eggCount = (EggCount) GameObject.Find("EggTracker").GetComponent(typeof(EggCount));
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        audioData = GetComponent<AudioSource>();
         if (other.gameObject.tag == "player")
         {
             Debug.Log("enter");
-            audioData.Play();
+            aSource.Play();
             eggCount.incEggCount();
             Destroy (gameObject);
         }
