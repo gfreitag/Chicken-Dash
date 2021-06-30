@@ -39,7 +39,7 @@ public class ObstacleCol : MonoBehaviour
         GameObject newPop = GameObject.Find("EndScreen");
         newPop.SetActive(false);
         stopScore = false;
-        updateScores();
+        //updateScores();
 
         //stuff for high score
         //set high score table scores (0 if no scores are saved)
@@ -139,38 +139,43 @@ public class ObstacleCol : MonoBehaviour
      public void AddScore (string name, int score_up)
     {
         updateScores();
-        int newScore;
-        string newName;
-        int oldScore;
+        int newScore = score_up;
+        string newName = name;
+        int oldScore = 0;
         string oldName;
-        newScore = score_up;
-        newName = name;
         
         for (int i=0;i<3;i++)
         {
+            Debug.Log("1. Value of i:" + i);
             if (PlayerPrefs.HasKey("HighScore" + i))
             {
+                Debug.Log("1. Value of oldScore, newScore:" + oldScore + "," + newScore);
+                Debug.Log("2. Value of i:" + i);
                 //if new score is higher than old score
-                if (PlayerPrefs.GetInt("HighScore" + i) < newScore)
+                if ( (PlayerPrefs.GetInt("HighScore" + i)) < newScore)
                 {
-                    //save old scores to oldScore and oldName
-                    //update present high score and name to new high score and name
                     oldScore = PlayerPrefs.GetInt("HighScore" + i);
                     oldName = PlayerPrefs.GetString("HighScoreName" + i);
+                    Debug.Log("2. Value of oldScore, newScore: " + oldScore + "," + newScore);
+                    //save old scores to oldScore and oldName
+                    //update present high score and name to new high score and name
                     PlayerPrefs.SetInt("HighScore" + i, newScore);
-                    PlayerPrefs.SetString("HighScore" + i, newName);
+                    PlayerPrefs.SetString("HighScoreName" + i, newName);
                     if (i==0) 
                     {
+                        Debug.Log(" Changing HS1" + newScore);
                         highScore1.text = newScore.ToString();
                         highScoreName1.text = newName;
                     }
                     else if (i==1)
                     {
+                        Debug.Log(" Changing HS2" + newScore);
                         highScore2.text = newScore.ToString();
                         highScoreName2.text = newName;
                     }
                     else if (i==2)
                     {
+                         Debug.Log(" Changing HS3" + newScore);
                         highScore3.text = newScore.ToString();
                         highScoreName3.text = newName;
                     }
@@ -184,10 +189,11 @@ public class ObstacleCol : MonoBehaviour
                 }
             }else
             {
+                Debug.Log("3. Value of i:" + i);
                 PlayerPrefs.SetInt("HighScore" + i, newScore);
-                PlayerPrefs.SetString("HighScore" + i, newName);
-                newScore = 0;
-                newName = "XXX";
+                PlayerPrefs.SetString("HighScoreName" + i, newName);
+                //newScore = 0;
+                //newName = "XXX";
                 if (i==0) 
                     {
                         highScore1.text = newScore.ToString();
@@ -204,6 +210,9 @@ public class ObstacleCol : MonoBehaviour
                         highScoreName3.text = newName;
                     }
                     PlayerPrefs.Save();
+
+                newScore = 0;
+                newName = "XXX";
             }
         } 
     }
