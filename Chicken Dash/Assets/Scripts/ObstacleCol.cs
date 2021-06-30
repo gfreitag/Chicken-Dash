@@ -83,16 +83,17 @@ public class ObstacleCol : MonoBehaviour
             Destroy(button);
 
             //took out the following lines and moved to closeScores function 
-            /*
+             /*
             popup.SetActive(true);
             Debug.Log("GAME OVER");
             dnd.updateRef();
-            */
-
+              */
+           
             //added high scores information instead 
             hs_popup.SetActive(true);
             AddScore("Yoongi", Int32.Parse(finalScore.text));
             //switchToEnd();
+          
         }
     }
 
