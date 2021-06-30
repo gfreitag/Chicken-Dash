@@ -39,15 +39,13 @@ public class ObstacleCol : MonoBehaviour
         GameObject newPop = GameObject.Find("EndScreen");
         newPop.SetActive(false);
         stopScore = false;
+        updateScores();
 
         //stuff for high score
         //set high score table scores (0 if no scores are saved)
-        highScore1.text = PlayerPrefs.GetInt("HighScore" + 0, 0).ToString();
-        highScore2.text = PlayerPrefs.GetInt("HighScore" + 1, 0).ToString();
-        highScore3.text = PlayerPrefs.GetInt("HighScore" + 2, 0).ToString();
-        highScoreName1.text = PlayerPrefs.GetString("HighScoreName" + 0, "1.XXX");
-        highScoreName2.text = PlayerPrefs.GetString("HighScoreName" + 1, "2.XXX");
-        highScoreName3.text = PlayerPrefs.GetString("HighScoreName" + 2, "3.XXX");
+        
+        
+       
     }
 
     // Update is called once per frame
@@ -83,16 +81,27 @@ public class ObstacleCol : MonoBehaviour
             Destroy(button);
 
             //took out the following lines and moved to closeScores function 
-            /*
+             /*
             popup.SetActive(true);
             Debug.Log("GAME OVER");
             dnd.updateRef();
-            */
-
+              */
+           
             //added high scores information instead 
             hs_popup.SetActive(true);
             AddScore("Yoongi", Int32.Parse(finalScore.text));
             //switchToEnd();
+
+            //if score is higher than lowest high score
+            /*
+            if (PlayerPrefs.GetInt("HighScore" + 2) < Int32.Parse(finalScore.text))
+            {
+
+            }
+            else {closeScores();}
+            */
+
+          
         }
     }
 
@@ -129,6 +138,7 @@ public class ObstacleCol : MonoBehaviour
 
      public void AddScore (string name, int score_up)
     {
+        updateScores();
         int newScore;
         string newName;
         int oldScore;
@@ -152,15 +162,20 @@ public class ObstacleCol : MonoBehaviour
                     if (i==0) 
                     {
                         highScore1.text = newScore.ToString();
+                        highScoreName1.text = newName;
                     }
                     else if (i==1)
                     {
                         highScore2.text = newScore.ToString();
+                        highScoreName2.text = newName;
                     }
                     else if (i==2)
                     {
                         highScore3.text = newScore.ToString();
+                        highScoreName3.text = newName;
                     }
+
+                    PlayerPrefs.Save();
                     
                     //set newScore and newName variables to newScore and newName
                     //can update rest of table 
@@ -176,19 +191,33 @@ public class ObstacleCol : MonoBehaviour
                 if (i==0) 
                     {
                         highScore1.text = newScore.ToString();
+                        highScoreName1.text = newName;
                     }
                     else if (i==1)
                     {
                         highScore2.text = newScore.ToString();
+                        highScoreName2.text = newName;
                     }
                     else if (i==2)
                     {
                         highScore3.text = newScore.ToString();
+                        highScoreName3.text = newName;
                     }
+                    PlayerPrefs.Save();
             }
         } 
     }
 
+   public void updateScores()
+   {
+       highScore1.text = PlayerPrefs.GetInt("HighScore" + 0, 0).ToString();
+        highScore2.text = PlayerPrefs.GetInt("HighScore" + 1, 0).ToString();
+        highScore3.text = PlayerPrefs.GetInt("HighScore" + 2, 0).ToString();
+        highScoreName1.text = PlayerPrefs.GetString("HighScoreName" + 0, "1.XXX");
+        highScoreName2.text = PlayerPrefs.GetString("HighScoreName" + 1, "2.XXX");
+        highScoreName3.text = PlayerPrefs.GetString("HighScoreName" + 2, "3.XXX");
+
+   }
     //reset high scores for REset button --> still have to create  
     public void Reset()
     {
@@ -209,6 +238,8 @@ public class ObstacleCol : MonoBehaviour
         popup.SetActive(true);
         Debug.Log("GAME OVER");
         dnd.updateRef();
+
+        
 
     }
 
