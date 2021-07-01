@@ -138,22 +138,26 @@ public class ObstacleCol : MonoBehaviour
 
      public void AddScore (string name, int score_up)
     {
+        Debug.Log("A");
         updateScores();
         int newScore = score_up;
         string newName = name;
-        int oldScore = 0;
+        int oldScore;
         string oldName;
         
         for (int i=0;i<3;i++)
         {
+            Debug.Log("B");
             Debug.Log("1. Value of i:" + i);
             if (PlayerPrefs.HasKey("HighScore" + i))
             {
-                Debug.Log("1. Value of oldScore, newScore:" + oldScore + "," + newScore);
+                Debug.Log("C");
+                Debug.Log("1. Value of oldScore, newScore:" + PlayerPrefs.GetInt("HighScore" + i) + "," + newScore);
                 Debug.Log("2. Value of i:" + i);
                 //if new score is higher than old score
                 if ( (PlayerPrefs.GetInt("HighScore" + i)) < newScore)
                 {
+                    Debug.Log("D");
                     oldScore = PlayerPrefs.GetInt("HighScore" + i);
                     oldName = PlayerPrefs.GetString("HighScoreName" + i);
                     Debug.Log("2. Value of oldScore, newScore: " + oldScore + "," + newScore);
@@ -163,18 +167,21 @@ public class ObstacleCol : MonoBehaviour
                     PlayerPrefs.SetString("HighScoreName" + i, newName);
                     if (i==0) 
                     {
+                        Debug.Log("E");
                         Debug.Log(" Changing HS1" + newScore);
                         highScore1.text = newScore.ToString();
                         highScoreName1.text = newName;
                     }
                     else if (i==1)
                     {
+                        Debug.Log("F");
                         Debug.Log(" Changing HS2" + newScore);
                         highScore2.text = newScore.ToString();
                         highScoreName2.text = newName;
                     }
                     else if (i==2)
                     {
+                        Debug.Log("G");
                          Debug.Log(" Changing HS3" + newScore);
                         highScore3.text = newScore.ToString();
                         highScoreName3.text = newName;
@@ -184,8 +191,10 @@ public class ObstacleCol : MonoBehaviour
                     
                     //set newScore and newName variables to newScore and newName
                     //can update rest of table 
+                    Debug.Log("H");
                     newScore = oldScore;
                     newName = oldName;
+                    Debug.Log("4. Value of oldScore, newScore:" + oldScore + "," + newScore);
                 }
             }else
             {
@@ -214,7 +223,9 @@ public class ObstacleCol : MonoBehaviour
                 newScore = 0;
                 newName = "XXX";
             }
-        } 
+            Debug.Log("J");
+        }
+        Debug.Log("K"); 
     }
 
    public void updateScores()
