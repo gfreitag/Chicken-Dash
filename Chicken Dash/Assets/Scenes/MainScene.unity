@@ -5467,6 +5467,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1465168668685922450, guid: 9d7ee1898d4234d26a1700a3608d4dea, type: 3}
+      propertyPath: Priority
+      value: 113
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465168668685922450, guid: 9d7ee1898d4234d26a1700a3608d4dea, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d46323e22e74e46baa241cbf48c85671, type: 3}
+    - target: {fileID: 1465168668685922450, guid: 9d7ee1898d4234d26a1700a3608d4dea, type: 3}
+      propertyPath: BypassEffects
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465168668685922450, guid: 9d7ee1898d4234d26a1700a3608d4dea, type: 3}
+      propertyPath: BypassReverbZones
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465168668685922450, guid: 9d7ee1898d4234d26a1700a3608d4dea, type: 3}
+      propertyPath: BypassListenerEffects
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5982977829492246905, guid: 9d7ee1898d4234d26a1700a3608d4dea, type: 3}
       propertyPath: m_Name
       value: goldenEgg
