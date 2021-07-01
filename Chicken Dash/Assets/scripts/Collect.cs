@@ -12,7 +12,7 @@ public class Collect : MonoBehaviour
     void Start()
     {
         eggCount = (EggCount) GameObject.Find("EggTracker").GetComponent(typeof(EggCount));
-        soundPlayer = GameObject.Find("CameraManager").transform.Find("CollectSound").gameObject;
+        soundPlayer = GameObject.Find("CameraManager").transform.Find("CollectManager").gameObject;
     }
 
     void OnTriggerEnter2D(Collider2D other)
