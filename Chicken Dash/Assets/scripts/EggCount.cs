@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EggCount : MonoBehaviour
 {
     private int eggCount;
+    public Text eggCounter;
 
     // Start is called before the first frame update
     void Start()
@@ -20,5 +22,6 @@ public class EggCount : MonoBehaviour
     public void incEggCount()
     {
         eggCount++;
+        eggCounter.text = "x"+eggCount;
     }
 }

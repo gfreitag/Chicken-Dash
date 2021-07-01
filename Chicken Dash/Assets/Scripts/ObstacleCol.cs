@@ -43,9 +43,9 @@ public class ObstacleCol : MonoBehaviour
 
         //stuff for high score
         //set high score table scores (0 if no scores are saved)
-        
-        
-       
+
+
+
     }
 
     // Update is called once per frame
@@ -73,6 +73,7 @@ public class ObstacleCol : MonoBehaviour
             pRun = (PlayerRun) GameObject.Find("CameraManager").GetComponent(typeof(PlayerRun));
             pRun.speed = 3;
             Destroy(GetComponent<PlayerRun>());
+            Destroy(GetComponent<PlayerJump>());
             Destroy(GetComponent<Animator>());
             rb = GetComponent<Rigidbody2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
@@ -80,14 +81,14 @@ public class ObstacleCol : MonoBehaviour
             rb.AddForce(transform.up*jumpForce*1.1f);
             Destroy(button);
 
-            //took out the following lines and moved to closeScores function 
+            //took out the following lines and moved to closeScores function
              /*
             popup.SetActive(true);
             Debug.Log("GAME OVER");
             dnd.updateRef();
               */
-           
-            //added high scores information instead 
+
+            //added high scores information instead
             hs_popup.SetActive(true);
             AddScore("Yoongi", Int32.Parse(finalScore.text));
             //switchToEnd();
@@ -101,7 +102,7 @@ public class ObstacleCol : MonoBehaviour
             else {closeScores();}
             */
 
-          
+
         }
     }
 
@@ -144,7 +145,7 @@ public class ObstacleCol : MonoBehaviour
         string newName = name;
         int oldScore;
         string oldName;
-        
+
         for (int i=0;i<3;i++)
         {
             Debug.Log("B");
@@ -165,7 +166,7 @@ public class ObstacleCol : MonoBehaviour
                     //update present high score and name to new high score and name
                     PlayerPrefs.SetInt("HighScore" + i, newScore);
                     PlayerPrefs.SetString("HighScoreName" + i, newName);
-                    if (i==0) 
+                    if (i==0)
                     {
                         Debug.Log("E");
                         Debug.Log(" Changing HS1" + newScore);
@@ -188,7 +189,7 @@ public class ObstacleCol : MonoBehaviour
                     }
 
                     PlayerPrefs.Save();
-                    
+
                     //set newScore and newName variables to newScore and newName
                     //can update rest of table 
                     Debug.Log("H");
@@ -203,7 +204,7 @@ public class ObstacleCol : MonoBehaviour
                 PlayerPrefs.SetString("HighScoreName" + i, newName);
                 //newScore = 0;
                 //newName = "XXX";
-                if (i==0) 
+                if (i==0)
                     {
                         highScore1.text = newScore.ToString();
                         highScoreName1.text = newName;
@@ -238,7 +239,7 @@ public class ObstacleCol : MonoBehaviour
         highScoreName3.text = PlayerPrefs.GetString("HighScoreName" + 2, "3.XXX");
 
    }
-    //reset high scores for REset button --> still have to create  
+    //reset high scores for REset button --> still have to create
     public void Reset()
     {
         PlayerPrefs.DeleteAll();
@@ -251,7 +252,7 @@ public class ObstacleCol : MonoBehaviour
 
     }
 
-//close out of high scores pop up and go to end screen 
+//close out of high scores pop up and go to end screen
     public void closeScores()
     {
         hs_popup.SetActive(false);
@@ -259,9 +260,9 @@ public class ObstacleCol : MonoBehaviour
         Debug.Log("GAME OVER");
         dnd.updateRef();
 
-        
+
 
     }
 
-    
+
 }
