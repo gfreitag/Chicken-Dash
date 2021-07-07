@@ -10,6 +10,8 @@ public class ObstacleCol : MonoBehaviour
 {
 
     public GameObject popup;
+    public GameObject eggCounter;
+    private EggCount eggCount;
     public BackgroundLoop bgLoop;
     public DoNotDestroy dnd;
     public bool stopScore;
@@ -71,6 +73,8 @@ public class ObstacleCol : MonoBehaviour
                 played=true;
             }
             pRun = (PlayerRun) GameObject.Find("CameraManager").GetComponent(typeof(PlayerRun));
+            eggCount = (EggCount)eggCounter.GetComponent(typeof(EggCount));
+            eggCount.saveEggCount();
             pRun.speed = 3;
             Destroy(GetComponent<PlayerRun>());
             Destroy(GetComponent<PlayerJump>());
@@ -191,7 +195,7 @@ public class ObstacleCol : MonoBehaviour
                     PlayerPrefs.Save();
 
                     //set newScore and newName variables to newScore and newName
-                    //can update rest of table 
+                    //can update rest of table
                     Debug.Log("H");
                     newScore = oldScore;
                     newName = oldName;
@@ -226,7 +230,7 @@ public class ObstacleCol : MonoBehaviour
             }
             Debug.Log("J");
         }
-        Debug.Log("K"); 
+        Debug.Log("K");
     }
 
    public void updateScores()
