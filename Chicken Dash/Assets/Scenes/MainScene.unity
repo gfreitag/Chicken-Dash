@@ -2103,6 +2103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popup: {fileID: 1171412073}
+  eggCounter: {fileID: 0}
   bgLoop: {fileID: 0}
   dnd: {fileID: 0}
   stopScore: 0
@@ -3977,6 +3978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popup: {fileID: 1171412073}
+  eggCounter: {fileID: 287106856}
   bgLoop: {fileID: 414972128}
   dnd: {fileID: 0}
   stopScore: 0
