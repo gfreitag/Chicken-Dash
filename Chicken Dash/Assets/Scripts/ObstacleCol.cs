@@ -146,7 +146,7 @@ public class ObstacleCol : MonoBehaviour
         int oldScore;
         string oldName;
 
-        for (int i=0;i<3;i++)
+        for (int i=0;i<=2;i++)
         {
             Debug.Log("B");
             Debug.Log("1. Value of i:" + i);
@@ -209,12 +209,12 @@ public class ObstacleCol : MonoBehaviour
                         highScore1.text = newScore.ToString();
                         highScoreName1.text = newName;
                     }
-                    else if (i==1)
+                else if (i==1)
                     {
                         highScore2.text = newScore.ToString();
                         highScoreName2.text = newName;
                     }
-                    else if (i==2)
+                else if (i==2)
                     {
                         highScore3.text = newScore.ToString();
                         highScoreName3.text = newName;
