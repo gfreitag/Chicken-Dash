@@ -697,7 +697,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &393220389
 GameObject:
@@ -2073,65 +2073,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65dc1749530cf48c3832694299f6e382, type: 3}
---- !u!1 &793367978
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 793367980}
-  - component: {fileID: 793367979}
-  m_Layer: 0
-  m_Name: obstacle_col_obj
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &793367979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793367978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ba4cb5f63ad847abafcbac47dea1264, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popup: {fileID: 1171412073}
-  eggCounter: {fileID: 0}
-  bgLoop: {fileID: 0}
-  dnd: {fileID: 0}
-  stopScore: 0
-  button: {fileID: 75171235}
-  death_sprite: {fileID: 0}
-  aClip2: {fileID: 0}
-  hs_popup: {fileID: 1116642956}
-  finalScore: {fileID: 225960830}
-  highScoreName1: {fileID: 57292148}
-  highScoreName2: {fileID: 2023124055}
-  highScoreName3: {fileID: 59030269}
-  highScore1: {fileID: 816953670}
-  highScore2: {fileID: 2045860822}
-  highScore3: {fileID: 637026195}
---- !u!4 &793367980
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793367978}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 225.68784, y: 149.02992, z: -10.389624}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &816953670 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7919402451285955892, guid: c406bb3109d68478ba848df6455f0007, type: 3}
@@ -3517,7 +3458,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1254986920
 GameObject:
@@ -4926,7 +4867,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 793367979}
+      - m_Target: {fileID: 1296105692}
         m_TargetAssemblyTypeName: ObstacleCol, Assembly-CSharp
         m_MethodName: closeScores
         m_Mode: 1
@@ -5688,7 +5629,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5959600694442709077, guid: 8233f5ad04d0e438b8e8891039dc6011, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5959600694442709077, guid: 8233f5ad04d0e438b8e8891039dc6011, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5793,7 +5734,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5982977829492246908, guid: 9d7ee1898d4234d26a1700a3608d4dea, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5982977829492246908, guid: 9d7ee1898d4234d26a1700a3608d4dea, type: 3}
       propertyPath: m_LocalPosition.x

@@ -60,7 +60,7 @@ public class ObstacleCol : MonoBehaviour
 
      void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "obstacle")
+        if ((collision.gameObject.tag == "obstacle") && (played == false))
         {
             //If the GameObject has the same tag as specified, output this message in the console
             //FindObjectOfType<GameManager>().EndGame();
@@ -93,6 +93,8 @@ public class ObstacleCol : MonoBehaviour
               */
 
             //added high scores information instead
+            //Reset();
+            updateScores();
             hs_popup.SetActive(true);
             AddScore("Yoongi", Int32.Parse(finalScore.text));
             //switchToEnd();
@@ -141,10 +143,8 @@ public class ObstacleCol : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-     public void AddScore (string name, int score_up)
+    public void AddScore (string name, int score_up)
     {
-        Debug.Log("A");
-        updateScores();
         int newScore = score_up;
         string newName = name;
         int oldScore;
@@ -152,42 +152,29 @@ public class ObstacleCol : MonoBehaviour
 
         for (int i=0;i<=2;i++)
         {
-            Debug.Log("B");
-            Debug.Log("1. Value of i:" + i);
             if (PlayerPrefs.HasKey("HighScore" + i))
             {
-                Debug.Log("C");
-                Debug.Log("1. Value of oldScore, newScore:" + PlayerPrefs.GetInt("HighScore" + i) + "," + newScore);
-                Debug.Log("2. Value of i:" + i);
                 //if new score is higher than old score
                 if ( (PlayerPrefs.GetInt("HighScore" + i)) < newScore)
                 {
-                    Debug.Log("D");
                     oldScore = PlayerPrefs.GetInt("HighScore" + i);
                     oldName = PlayerPrefs.GetString("HighScoreName" + i);
-                    Debug.Log("2. Value of oldScore, newScore: " + oldScore + "," + newScore);
                     //save old scores to oldScore and oldName
                     //update present high score and name to new high score and name
                     PlayerPrefs.SetInt("HighScore" + i, newScore);
                     PlayerPrefs.SetString("HighScoreName" + i, newName);
                     if (i==0)
                     {
-                        Debug.Log("E");
-                        Debug.Log(" Changing HS1" + newScore);
                         highScore1.text = newScore.ToString();
                         highScoreName1.text = newName;
                     }
                     else if (i==1)
                     {
-                        Debug.Log("F");
-                        Debug.Log(" Changing HS2" + newScore);
                         highScore2.text = newScore.ToString();
                         highScoreName2.text = newName;
                     }
                     else if (i==2)
                     {
-                        Debug.Log("G");
-                         Debug.Log(" Changing HS3" + newScore);
                         highScore3.text = newScore.ToString();
                         highScoreName3.text = newName;
                     }
@@ -196,14 +183,11 @@ public class ObstacleCol : MonoBehaviour
 
                     //set newScore and newName variables to newScore and newName
                     //can update rest of table
-                    Debug.Log("H");
                     newScore = oldScore;
                     newName = oldName;
-                    Debug.Log("4. Value of oldScore, newScore:" + oldScore + "," + newScore);
                 }
             }else
             {
-                Debug.Log("3. Value of i:" + i);
                 PlayerPrefs.SetInt("HighScore" + i, newScore);
                 PlayerPrefs.SetString("HighScoreName" + i, newName);
                 //newScore = 0;
@@ -228,9 +212,8 @@ public class ObstacleCol : MonoBehaviour
                 newScore = 0;
                 newName = "XXX";
             }
-            Debug.Log("J");
         }
-        Debug.Log("K");
+        return;
     }
 
    public void updateScores()
