@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class EggCount : MonoBehaviour
 {
@@ -14,7 +15,10 @@ public class EggCount : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        loadEggCount();
+        if(SceneManager.GetActiveScene().name!="MainScene")
+        {
+            loadEggCount("Total Golden Eggs: x");
+        }
     }
 
     public int getEggCount()
@@ -22,21 +26,27 @@ public class EggCount : MonoBehaviour
         return eggCount;
     }
 
-    public void incEggCount()
+    public void incEggCount(string def = "x")
     {
         eggCount++;
-        eggCounter.text = "x"+eggCount;
+        eggCounter.text = def+eggCount;
     }
 
-    public void refreshEggCount()
+    public void refreshEggCount(string def = "x")
     {
-        eggCounter.text = "x"+eggCount;
+
+        eggCounter.text = def+eggCount;
     }
 
     private void resetEggCount()
     {
         eggCount = 0;
         saveEggCount();
+    }
+
+    public void setEggCount(int eggC)
+    {
+        eggCount = eggC;
     }
 
     public void saveEggCount()
@@ -50,7 +60,7 @@ public class EggCount : MonoBehaviour
         Debug.Log("File saved");
     }
 
-    private void loadEggCount()
+    private void loadEggCount(string def = "x")
     {
         if(File.Exists(Application.persistentDataPath +  "/eggCount.dat"))
         {
@@ -60,12 +70,29 @@ public class EggCount : MonoBehaviour
             EggData data = (EggData)bf.Deserialize(file);
             file.Close();
             eggCount = data.eggCount;
-            refreshEggCount();
+            refreshEggCount(def);
+            Debug.Log("File loaded");
         }
         else
         {
             Debug.Log("File does not exist");
             eggCount = 0;
+        }
+    }
+
+    public int getTotalEggCount()
+    {
+        if(File.Exists(Application.persistentDataPath +  "/eggCount.dat"))
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath +  "/eggCount.dat", FileMode.Open);
+            EggData data = (EggData)bf.Deserialize(file);
+            file.Close();
+            return data.eggCount;
+        }
+        else
+        {
+            return 0;
         }
     }
 }
