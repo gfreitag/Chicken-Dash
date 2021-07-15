@@ -106,6 +106,7 @@ public class ObstacleCol : MonoBehaviour
                 congrats_popup.SetActive(true);
                 AddScore("Yoongi", Int32.Parse(finalScore.text));
                 
+                
             }
             else {closeScores();}
         
