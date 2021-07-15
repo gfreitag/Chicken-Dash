@@ -73,6 +73,8 @@ public class ObstacleCol : MonoBehaviour
             }
             pRun = (PlayerRun) GameObject.Find("CameraManager").GetComponent(typeof(PlayerRun));
             eggCount = (EggCount)eggCounter.GetComponent(typeof(EggCount));
+            int total = eggCount.getTotalEggCount() + eggCount.getEggCount();
+            eggCount.setEggCount(total);
             eggCount.saveEggCount();
             pRun.speed = 3;
             Destroy(GetComponent<PlayerRun>());

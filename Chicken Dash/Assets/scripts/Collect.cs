@@ -8,11 +8,13 @@ public class Collect : MonoBehaviour
     //public GameObject eggTracker;
     private EggCount eggCount;
     GameObject soundPlayer;
+    public bool gameOver;
 
     void Start()
     {
         eggCount = (EggCount) GameObject.Find("EggTracker").GetComponent(typeof(EggCount));
         soundPlayer = GameObject.Find("CameraManager").transform.Find("CollectManager").gameObject;
+        gameOver = false;
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -21,7 +23,10 @@ public class Collect : MonoBehaviour
         {
             Debug.Log("enter");
             soundPlayer.GetComponent<AudioSource>().Play();
-            eggCount.incEggCount();
+            if(GameObject.Find("EndScreen"))
+            {
+                eggCount.incEggCount();
+            }
             Destroy (gameObject);
         }
     }
