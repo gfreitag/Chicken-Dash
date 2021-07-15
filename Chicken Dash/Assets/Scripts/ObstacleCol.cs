@@ -8,13 +8,11 @@ using System;
 
 public class ObstacleCol : MonoBehaviour
 {
-
     public GameObject popup;
     public GameObject eggCounter;
     private EggCount eggCount;
     public BackgroundLoop bgLoop;
     public DoNotDestroy dnd;
-    public bool stopScore;
     public GameObject button;
     public Sprite death_sprite;
     private SpriteRenderer spriteRenderer;
@@ -27,6 +25,7 @@ public class ObstacleCol : MonoBehaviour
 
     //variables for high score
     public GameObject hs_popup;
+    public GameObject congrats_popup;
     public Text finalScore;
     public Text highScoreName1;
     public Text highScoreName2;
@@ -34,14 +33,14 @@ public class ObstacleCol : MonoBehaviour
     public Text highScore1;
     public Text highScore2;
     public Text highScore3;
+    private TouchScreenKeyboard keyboard;
 
     // Start is called before the first frame update
     void Start()
     {
         GameObject newPop = GameObject.Find("EndScreen");
         newPop.SetActive(false);
-        stopScore = false;
-        //updateScores();
+
 
         //stuff for high score
         //set high score table scores (0 if no scores are saved)
@@ -94,19 +93,20 @@ public class ObstacleCol : MonoBehaviour
 
             //added high scores information instead
             //Reset();
-            updateScores();
-            hs_popup.SetActive(true);
-            AddScore("Yoongi", Int32.Parse(finalScore.text));
             //switchToEnd();
 
             //if score is higher than lowest high score
-            /*
+            updateScores();
             if (PlayerPrefs.GetInt("HighScore" + 2) < Int32.Parse(finalScore.text))
             {
-
+                //keyboard = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default);
+                //keyboard.active = true;
+                congrats_popup.SetActive(true);
+                AddScore("Yoongi", Int32.Parse(finalScore.text));
+                
             }
             else {closeScores();}
-            */
+        
 
 
         }
@@ -249,6 +249,12 @@ public class ObstacleCol : MonoBehaviour
 
 
 
+    }
+
+    public void closeCongrats()
+    {
+        congrats_popup.SetActive(false);
+        hs_popup.SetActive(true);
     }
 
 
