@@ -94,7 +94,7 @@ public class ObstacleCol : MonoBehaviour
               */
 
             //added high scores information instead
-            //Reset();
+            Reset();
             //switchToEnd();
 
             //if score is higher than lowest high score
