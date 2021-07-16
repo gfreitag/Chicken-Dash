@@ -23,7 +23,7 @@ public class Collect : MonoBehaviour
         {
             Debug.Log("enter");
             soundPlayer.GetComponent<AudioSource>().Play();
-            if(GameObject.Find("EndScreen"))
+            if(GameObject.Find("EndScreen")==null)
             {
                 eggCount.incEggCount();
             }
