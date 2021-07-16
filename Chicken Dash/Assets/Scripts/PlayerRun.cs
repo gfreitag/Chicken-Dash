@@ -29,6 +29,7 @@ public class PlayerRun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(""+ speed);
         speed += Time.deltaTime*acc;
         transform.Translate(Time.deltaTime*speed, 0,0);
 
