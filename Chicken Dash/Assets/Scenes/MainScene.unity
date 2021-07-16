@@ -4970,9 +4970,9 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.545}
-  m_AnchorMax: {x: 0.5, y: 0.5916667}
-  m_AnchoredPosition: {x: -4, y: -24}
-  m_SizeDelta: {x: 500, y: 72}
+  m_AnchorMax: {x: 0.5, y: 0.65000004}
+  m_AnchoredPosition: {x: 15.385, y: -29.5}
+  m_SizeDelta: {x: 548.77, y: 37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1540974160
 MonoBehaviour:
@@ -4996,11 +4996,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 58b647c5b2ec4184e9a07a561cdf0644, type: 3}
-    m_FontSize: 60
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 60
+    m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -5536,6 +5536,7 @@ GameObject:
   - component: {fileID: 1896218640}
   - component: {fileID: 1896218642}
   - component: {fileID: 1896218641}
+  - component: {fileID: 1896218643}
   m_Layer: 0
   m_Name: congrats_txt
   m_TagString: Untagged
@@ -5552,7 +5553,7 @@ RectTransform:
   m_GameObject: {fileID: 1896218639}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 361228047}
   m_RootOrder: 0
@@ -5584,7 +5585,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 58b647c5b2ec4184e9a07a561cdf0644, type: 3}
-    m_FontSize: 70
+    m_FontSize: 50
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -5604,6 +5605,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896218639}
   m_CullTransparentMesh: 1
+--- !u!95 &1896218643
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896218639}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f1f97079ebc84a569fa42fbcd6d623a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1901330657
 GameObject:
   m_ObjectHideFlags: 0
